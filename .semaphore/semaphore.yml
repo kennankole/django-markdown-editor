@@ -10,4 +10,9 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
+            - sem-version python 3.8.2
             - checkout
+            - mkdir .pip_cache
+            - cache restore
+            - pipenv install --cache-dir .pip_cache -r requirements.txt
+            - cache store
