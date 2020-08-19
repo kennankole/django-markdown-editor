@@ -34,14 +34,14 @@ blocks:
         - name: Unit tests
           commands:
             - cd martor_demo
-            - python3 manage.py makemigrations
-            - python3 manage.py migrate
-            - python3 manage.py test
+            - python manage.py makemigrations
+            - python manage.py migrate
+            - python manage.py test
         - name: Checklist
           commands:
             - cd martor_demo
-            - python3 manage.py check --deploy
+            - python manage.py check --deploy
         - name: Style Check
           commands:
-            - pipenv install flake8
+            - pip install flake8
             - flake8 martor_demo --max-line-length=127
